@@ -41,7 +41,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon key>
 
 不要把 service role key 放进这个应用。权限靠 RLS 和页面上的角色检查。
 
-5. 在 Supabase Auth 里打开邮箱密码登录。第一个注册成功的用户一定是 admin，哪怕注册时带了别的角色。之后再邀请的人，如果 `raw_user_meta_data.role` 是 `content` 或 `cs`，就按这个角色建档；再写 `admin` 也不会再生出一位创始人，会落到客服。角色之后在 Settings 里改，最后一位创始人不能被降级。
+5. 在 Supabase Auth 里打开邮箱密码登录。配置好之后，登录页可以在「登录 / 注册」之间切换。第一个注册成功的用户一定是 admin，哪怕注册时带了别的角色。之后再邀请的人，如果 `raw_user_meta_data.role` 是 `content` 或 `cs`，就按这个角色建档；再写 `admin` 也不会再生出一位创始人，会落到客服。角色之后在 Settings 里改，最后一位创始人不能被降级。
 
 本地填了这两个变量之后，登录页不再显示演示账号，改走 Supabase Auth。
 
