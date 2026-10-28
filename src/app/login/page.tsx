@@ -21,7 +21,7 @@ export default function LoginPage() {
               还没有配置 Supabase。在 Vercel 或本地 `.env.local` 填入 NEXT_PUBLIC_SUPABASE_URL 和 NEXT_PUBLIC_SUPABASE_ANON_KEY，然后重新部署。
             </p>
           ) : (
-            <LoginForm />
+            <LoginForm mode={mode} />
           )}
         </div>
         {mode === "local" ? (
